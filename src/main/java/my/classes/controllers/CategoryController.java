@@ -33,7 +33,13 @@ public class CategoryController {
         }*/
 
         model.addAttribute("products",products);
+        model.addAttribute("category",category);
         model.addAttribute("categoryName", category.getCategoryName());
         return "categoryProducts";
     }
+
+    /*@RequestMapping(value = "/category", method = RequestMethod.GET)
+    public String categoriesList(){
+        List<Category> categories = categoryService.findAll();
+    }*/
 }
