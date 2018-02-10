@@ -13,7 +13,7 @@ public class Category {
     @Column(name="category_name")
     private String categoryName;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category", fetch = FetchType.EAGER)
     private List<Product> products;
 
     public Category() {
@@ -38,6 +38,7 @@ public class Category {
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
+
 
     public List<Product> getProducts() {
         return products;

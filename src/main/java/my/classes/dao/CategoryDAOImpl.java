@@ -22,6 +22,14 @@ public class CategoryDAOImpl implements CategoryDAO{
     @Transactional
     public Category findById(int id) {
         Category category = sessionFactory.getCurrentSession().load(Category.class, new Integer(id));
+        category.getId();
         return category;
+    }
+
+    @Override
+    @Transactional
+    public List<Category> findAll() {
+        List<Category> categories = sessionFactory.getCurrentSession().createQuery("from Category").list();
+        return categories;
     }
 }

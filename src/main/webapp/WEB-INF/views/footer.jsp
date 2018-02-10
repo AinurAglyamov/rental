@@ -17,9 +17,10 @@
         </div>
     </div>
 </footer>
-<script src="resources/js/jquery.js"></script>
-<script src="resources/js/bootstrap.min.js"></script>
-<script src="resources/js/main.js"></script>
+
+<script src="<c:url value="/resources/js/jquery.js" />"></script>
+<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
+<script src="<c:url value="/resources/js/main.js" />"></script>
 
 <script>
     // JavaScript for deleting product

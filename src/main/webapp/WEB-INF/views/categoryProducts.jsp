@@ -9,10 +9,10 @@
             <div class="col-md-12 col-xs-12 col-lg-10">
                 <div id="products">
                     <div class="page-header">
-                        <h1>${categoryName}</h1>
+                        <h1>${category.categoryName}</h1>
                     </div>
                     <div class='right-button-margin'>
-                        <a href='/admin/createproduct/{$category_id}/' class='btn btn-primary pull-right'>
+                        <a href='/rental/createproduct/${category.id}/' class='btn btn-primary pull-right'>
                             <span class='glyphicon glyphicon-plus'></span>Добавить
                         </a>
                     </div>
@@ -35,15 +35,15 @@
                                         <td>${product.cost}</td>
                                         <td>${product.amount}</td>
                                         <td>
-                                            <a href='/admin/info/{$product['id']}/' class='btn btn-primary left-margin'>
+                                            <a href='/rental/info/${product.id}/' class='btn btn-primary left-margin'>
                                             <span class='glyphicon glyphicon-list'></span>
                                             Инфо
                                             </a>
-                                            <a delete-id='{$product['id']}' class='btn btn-danger delete-object'>
+                                            <a delete-id='${product.id}' class='btn btn-danger delete-object'>
                                             <span class='glyphicon glyphicon-remove'></span>
                                             Удалить
                                             </a>
-                                            <a href='/admin/updateproduct/{$product['id']}/' class='btn btn-info left-margin'>
+                                            <a href='/rental/updateproduct/${product.id}/' class='btn btn-info left-margin'>
                                             <span class='glyphicon glyphicon-edit'></span>
                                             Редактировать
                                             </a>

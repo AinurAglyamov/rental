@@ -37,15 +37,15 @@
                                         <td>${product.amount}</td>
                                         <td>${product.category.categoryName}</td>
                                         <td>
-                                            <a href='/admin/info/{$product['id']}/' class='btn btn-primary left-margin'>
+                                            <a href='/rental/info/${product.id}/' class='btn btn-primary left-margin'>
                                             <span class='glyphicon glyphicon-list'></span>
                                             Инфо
                                             </a>
-                                            <a delete-id='{$product['id']}' class='btn btn-danger delete-object'>
+                                            <a delete-id='${product.id}' class='btn btn-danger delete-object'>
                                             <span class='glyphicon glyphicon-remove'></span>
                                             Удалить
                                             </a>
-                                            <a href='/admin/updateproduct/{$product['id']}/' class='btn btn-info left-margin'>
+                                            <a href='/rental/updateproduct/${product.id}/' class='btn btn-info left-margin'>
                                             <span class='glyphicon glyphicon-edit'></span>
                                             Редактировать
                                             </a>
