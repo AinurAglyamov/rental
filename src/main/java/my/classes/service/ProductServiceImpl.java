@@ -17,8 +17,23 @@ public class ProductServiceImpl implements ProductService{
         this.productDAO = productDAO;
     }
 
-    @Transactional
     public List<Product> productsList() {
         return productDAO.findAll();
     }
+
+
+    public Product findById(int id) {
+        return productDAO.findById(id);
+    }
+
+
+    public void addProduct(Product product) {
+         productDAO.addProduct(product);
+    }
+
+    /*@Override
+    public Product findByTitle(String title) {
+        Product product = productDAO.findByTitle(title);
+        return product;
+    }*/
 }

@@ -12,7 +12,7 @@
                         <h1>${category.categoryName}</h1>
                     </div>
                     <div class='right-button-margin'>
-                        <a href='/rental/createproduct/${category.id}/' class='btn btn-primary pull-right'>
+                        <a href='/rental/addproduct/${category.id}/' class='btn btn-primary pull-right'>
                             <span class='glyphicon glyphicon-plus'></span>Добавить
                         </a>
                     </div>
@@ -35,7 +35,7 @@
                                         <td>${product.cost}</td>
                                         <td>${product.amount}</td>
                                         <td>
-                                            <a href='/rental/info/${product.id}/' class='btn btn-primary left-margin'>
+                                            <a href='/rental/product/${product.id}/' class='btn btn-primary left-margin'>
                                             <span class='glyphicon glyphicon-list'></span>
                                             Инфо
                                             </a>

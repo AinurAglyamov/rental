@@ -7,11 +7,14 @@ import my.classes.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class CategoryController {
@@ -42,4 +45,14 @@ public class CategoryController {
     public String categoriesList(){
         List<Category> categories = categoryService.findAll();
     }*/
+    @ModelAttribute("categories")
+    public Map<Integer, String> getCategories(){
+        Map<Integer, String> categories = new HashMap<>();
+        List<Category> categoryList = categoryService.findAll();
+        for(Category category : categoryList){
+            categories.put(category.getId(), category.getCategoryName());
+        }
+        return categories;
+    }
+
 }

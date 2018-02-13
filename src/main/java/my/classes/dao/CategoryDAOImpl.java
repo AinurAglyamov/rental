@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Transactional
+
 @Repository
 public class CategoryDAOImpl implements CategoryDAO{
     private SessionFactory sessionFactory;
@@ -18,15 +18,15 @@ public class CategoryDAOImpl implements CategoryDAO{
         this.sessionFactory = sessionFactory;
     }
 
-    @Override
+
     @Transactional
     public Category findById(int id) {
         Category category = sessionFactory.getCurrentSession().load(Category.class, new Integer(id));
-        category.getId();
+        //category.getId();
         return category;
     }
 
-    @Override
+
     @Transactional
     public List<Category> findAll() {
         List<Category> categories = sessionFactory.getCurrentSession().createQuery("from Category").list();
