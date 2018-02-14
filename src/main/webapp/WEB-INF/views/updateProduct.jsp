@@ -11,13 +11,14 @@
     <div class="container">
         <div class="row">
             <div class="page-header">
-                <h1>Добавить продукт</h1>
+                <h1>Редактировать продукт</h1>
             </div>
             <div class='right-button-margin'>
                 <a href='/rental/' class='btn btn-default pull-right'>Назад к списку</a>
             </div>
 
-            <form:form action="/rental/addproduct/" modelAttribute="product" method="post">
+
+            <form:form action="/rental/updateproduct/" modelAttribute="product" method="post">
                 <table class='table table-hover table-responsive table-bordered'>
                     <tr>
                         <td>Наименование</td>
@@ -39,14 +40,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <button type="submit" class="btn btn-primary">
-                                <c:if test="${product.id eq 0}">
-                                    Добавить
-                                </c:if>
-                                <c:if test="${product.id ne 0}">
-                                    Обновить
-                                </c:if>
-                            </button>
+                            <button type="submit" class="btn btn-primary">Добавить</button>
                         </td>
                     </tr>
                 </table>

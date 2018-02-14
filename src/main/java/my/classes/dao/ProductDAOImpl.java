@@ -48,7 +48,22 @@ public class ProductDAOImpl implements ProductDAO{
         if(query.getSingleResult() == null){
             sessionFactory.getCurrentSession().persist(product);
         } else {
-            System.out.println("Продукт уже есть");
+            updateProduct(product);
         }
+    }
+
+    @Transactional
+    @Override
+    public void updateProduct(Product product) {
+        sessionFactory.getCurrentSession().update(product);
+    }
+
+    @Transactional
+    @Override
+    public void removeProduct(int id) {
+        Product product = findById(id);
+        System.out.println(product);
+        if(product != null)
+            sessionFactory.getCurrentSession().remove(product);
     }
 }

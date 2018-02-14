@@ -8,8 +8,10 @@ public interface ProductDAO {
     List<Product> findAll();
     Product findById(int id);
     //Product findByTitle(String title);
-    void addProduct(Product product);/*
+    void addProduct(Product product);
     void updateProduct(Product product);
+    void removeProduct(int id);
+    /*
     void deleteProduct(int id);*/
 
 }

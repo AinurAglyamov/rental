@@ -21,6 +21,7 @@
 <script src="<c:url value="/resources/js/jquery.js" />"></script>
 <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 <script src="<c:url value="/resources/js/main.js" />"></script>
+<script src="<c:url value="/resources/js/bootbox.min.js" />"></script>
 
 <script>
     // JavaScript for deleting product
@@ -44,8 +45,8 @@
 
                 if (result == true) {
 
-                    $.post('/admin/deleteproduct/', {
-                        object_id: id
+                    $.post('/rental/deleteproduct/', {
+                        id: id
                     }, function (data) {
                         location.reload();
                     }).fail(function () {
