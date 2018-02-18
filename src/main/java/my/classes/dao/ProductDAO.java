@@ -13,5 +13,6 @@ public interface ProductDAO {
     void removeProduct(int id);
     /*
     void deleteProduct(int id);*/
+    //
 
 }
