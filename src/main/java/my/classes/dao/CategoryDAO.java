@@ -7,4 +7,5 @@ import java.util.List;
 public interface CategoryDAO {
     Category findById(int id);
     List<Category> findAll();
+    //
 }
